@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musician</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Chris Lane</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section class="hero">
+            <div class="inner">
+                <div class="clipper">
+                    <h1>GO MUSICIAN</h1>
+                </div>
+                 
+                <div class="anim-panel">    
+                    <p>Start touring Today! Tickets available now! </p>
+                    <a href="#" class="read-btn primary">GET FAMOUS</a>
+                </div>
+            </div>
+        </section>
+        <section class="sidebar">
+                <div class="inner">
+                        <div class="clipper">
+                            <h2>Featured</h2>
+                        </div>
+                        <div class="anim-panel">    
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla asperiores voluptate ad vero officiis minus, reprehenderit eveniet recusandae, ipsum tempore labore iste. Officia, tenetur id! Esse sunt error a eveniet praesentium. Autem saepe itaque voluptas.</p>
+                                <a href="#" class="read-btn">READ MORE</a>
+                            </div>  
+            </div>
+        </section>
+        <section class="subscribe">
+                <div class="inner">
+                        <div class="clipper">
+                            <h2>Subscribe</h2>
+                        </div>
+
+                        <div class="anim-panel">
+                            <p>Get the latest updates about this website and stuff.</p>
+                            <input type="text" name="email" placeholder="Email Address">
+                            <button class="cta">Subscribe now</button>
+                        </div>
+        </section>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+    <script>
+    
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            window.addEventListener("load", function(e){
+
+                document.body.style.display = "block";
+                var tl = new TimelineMax();
+
+                tl.staggerFrom('section', 2, {
+                    opacity: 0,
+                    scale: .5,
+                    ease: Power2.easeOut
+                }, 0.2)
+
+                tl.staggerFrom('h1, h2', .5, {
+                    opacity: 0,
+                    y: -40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=2")
+
+                tl.staggerFrom('.anim-panel', 1, {
+                    opacity: 0,
+                    y: -40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=1.5")
+  
+            }, false);
+        });
+
+    
+    </script>
+
+</body>
+</html>
